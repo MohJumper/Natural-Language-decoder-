@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+
+
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  
+  <meta name="Author" content="John coffey">
+
+  
+  <meta name="GENERATOR" content="Mozilla/4.74 [en] (WinNT; U) [Netscape]"><title>Word Tree</title></head><body>
+<center><b>University of West Florida</b> <br>
+<b>Computer Science Foundations: Data Structures and Algorithms</b><br>
+<b>Project 3<br>
+</b></center>
+
+<p><span style="font-weight: bold;">Problem Description</span><br>
+</p>
+
+<p style="margin-top: 0pt; margin-bottom: 0pt;">The goal of this
+assignment is to make a natural language decoder using a binary tree in
+Java. Your program will build a binary tree with nodes containing
+words, based upon strings of (+) and (-) symbols associated with each
+word.<br>
+<br>
+Suppose we wanted a tree that would allow us to encode and decode
+words. It might look like this:</p>
+
+<p style="margin-top: 0pt; margin-bottom: 0pt;"><br>
+</p>
+
+<p style="margin-top: 0pt; margin-bottom: 0pt;"><img style="width: 409px; height: 211px;" alt="word tree" src="WordTree.png">
+<br>
+&nbsp; <br>
+With such a tree, the sentence "hello world how are you" would be
+encoded:</p>
+
+<p style="margin-top: 0pt; margin-bottom: 0pt;"><br>
+</p>
+
+<p style="margin-top: 0pt; margin-bottom: 0pt; font-family: monospace;">+&nbsp;
+-&nbsp; ++&nbsp; +-&nbsp; -+</p>
+
+<p style="margin-top: 0pt; margin-bottom: 0pt;"> <b><br>
+Requirements for this assignment:</b><br>
+Your project must read two files:</p>
+
+<ul>
+
+  <li><span style="font-family: monospace;">words.txt:</span> contains
+words and the strings of + and - characters for each word<br>
+  </li>
+  <li><span style="font-family: monospace;">encoded.txt:</span> a file
+containing sequences of (+), (-), and (&lt;space&gt;) characters
+encoding a sentence</li>
+</ul>
+
+For instance, for the above tree, <span style="font-family: monospace;">words.txt</span>
+would contain:<br>
+
+<span style="font-family: monospace;">hello +</span><br style="font-family: monospace;">
+
+<span style="font-family: monospace;">world -</span><br style="font-family: monospace;">
+
+<span style="font-family: monospace;">how ++</span><br style="font-family: monospace;">
+
+<span style="font-family: monospace;">are --</span><br style="font-family: monospace;">
+
+<span style="font-family: monospace;">you +-</span><br style="font-family: monospace;">
+
+<span style="font-family: monospace;">I --</span><br style="font-family: monospace;">
+
+<span style="font-family: monospace;">am +++</span><br style="font-family: monospace;">
+
+<span style="font-family: monospace;">fine ++-<br>
+<br>
+encoded.txt</span> might contain:<span style="font-family: monospace;"><br>--&nbsp; +++&nbsp; ++-&nbsp; ++ -- +-<br>
+<br>
+</span>which reads: <span style="font-family: monospace;">I am fine how are you</span><span style="font-family: monospace;"></span><br>
+
+<br>
+
+Note that this is NOT a binary search tree, even though it can be
+traversed deterministically like a BST. Note that the root node is
+empty as we need at least one (+) or (-) associated with each word.
+This assignment will require you to rethink the <span style="font-family: monospace;">insert() </span>method
+for binary search trees where you will traverse through the existing
+tree to place the new node based upon the sequence of (+) and (-)
+characters associated with a word. Just as in the case of BST, you may
+write either an iterative or recursive routine to insert.<br>
+<br>
+Once the tree has been built, you will process encoded.txt. Read and decode a line at a time. The String method <span style="font-family: monospace;">split(&lt;regex&gt;)</span> will simplify your life significantly.<br>
+<br>
+
+<p style="margin-top: 0pt; margin-bottom: 0pt;"> <b>Program execution:</b><br>
+When your program runs, it will read <span style="font-family: monospace;">words.txt</span> and build the tree
+automatically. Then, it will read <span style="font-family: monospace;">encoded.txt</span>,
+decode the text and print the text to the console. No user input should
+be required.</p>
+
+<br>
+
+<p style="margin-top: 0pt; margin-bottom: 0pt;"> <span style="font-weight: bold;">Deliverables</span><br>
+1. Source code<br>
+</p>
+
+<p style="margin-top: 0pt; margin-bottom: 0pt;">2. <span style="font-family: monospace;">words.txt</span> and <span style="font-family: monospace;">encoded.txt</span> from this website <br>
+</p>
+
+<p><b>Submission:</b> </p>
+
+1. Compile and run your program one last time before submitting it.
+Your program must run in Windows.<br>
+
+2. Place every file in your submission in a SINGLE DIRECTORY named
+&lt;last name&gt;&lt;first initial&gt;. For instance, I
+would create directory: coffeyj.<br>
+
+3. zip
+that FOLDER into a .zip file with the SAME NAME. This means that inside
+your zip file, you will have exactly one folder (from the example:
+coffeyj) showing at the top level. Inside that folder will be ALL
+the files in your project. Comment any <span style="font-family: monospace; font-weight: bold;">package </span>statements your development environment might have inserted.<br>
+
+4. DO NOT make separate folders for
+documentation and source files (or anything else) inside the main
+folder. Having such a setup simply necessitates more navigation time to
+get where we need to go to grade.<br>
+
+5. Any needed input files should be in the top-level folder along with
+the source code.<br>
+
+6. MacOS users - remove the _MacOS_ utility folder before you zip up
+the file. If you cannot, delete it from the archive once the archive is
+created. It just takes up space and is not needed for anything we do
+with your submissions.<br>
+
+7. Login to UWF's Canvas system. Select our course.<br>
+
+8. Go to the appropriate assignment, choose your program file and click
+the "Upload Assignment" button.<br>
+
+9. Upload your file. Check to insure that the file was uploaded.<br>
+
+10. Be sure to review the university policy on academic dishonesty.
+This is an individual project<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+</body></html>
